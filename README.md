@@ -13,7 +13,7 @@ If you're using [Composer](http://getcomposer.org/), you can simply add a depend
 
     {
         "require": {
-            "droath/recurly_client": "dev-master"
+            "droath/webmerge": "dev-master"
         }
     }
 
