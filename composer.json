@@ -1,0 +1,24 @@
+{
+    "name": "droath/webmerge",
+    "description": "WebMerge.me REST API resources.",
+    "keywords": ["API", "web", "merge", "WebMerge", "REST", "PDF"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Travis Tomka",
+            "email": "underoathosx@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebMerge\\": "./src"
+        }
+    }
+}
