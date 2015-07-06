@@ -50,3 +50,6 @@ $data = $response->extract()->asArray();
 
 var_dump($data);
 ```
+
+### Sponsored By
+![Isovera Logo](./assets/logo.png)
