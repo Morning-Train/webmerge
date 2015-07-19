@@ -4,24 +4,7 @@ namespace WebMerge\Responses;
 
 use WebMerge\Exceptions\InvalidArgumentException;
 
-class PDFData {
-
-    /**
-     * Response contents.
-     *
-     * @var string
-     */
-    private $contents;
-
-    /**
-     * PDFData construct method.
-     *
-     * @param string $contents
-     */
-    public function __construct($contents)
-    {
-        $this->contents = $contents;
-    }
+class PDFData extends Data {
 
     /**
      * Download resource contents as a PDF.

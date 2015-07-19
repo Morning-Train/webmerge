@@ -2,14 +2,7 @@
 
 namespace WebMerge\Responses;
 
-class JSONData {
-
-    private $contents;
-
-    public function __construct($contents)
-    {
-        $this->contents = $contents;
-    }
+class JSONData extends Data {
 
     /**
      * Return response contents as an array.
@@ -21,5 +14,4 @@ class JSONData {
     {
         return $this->contents ? json_decode($this->contents) : [];
     }
-
 }
