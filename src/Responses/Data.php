@@ -9,7 +9,7 @@ abstract class Data {
      *
      * @var string
      */
-    private $contents;
+    protected $contents;
 
     /**
      * Construct data object.
