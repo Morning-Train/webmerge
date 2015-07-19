@@ -52,4 +52,4 @@ var_dump($data);
 ```
 
 ### Sponsored By
-![Isovera Logo](./assets/logo.png)
+![Isovera Logo](https://i.imgur.com/dLlbXwR.png)
