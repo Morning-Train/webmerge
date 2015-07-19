@@ -2,7 +2,7 @@
 
 namespace WebMerge\Responses;
 
-class JSONData extends Data {
+class JSONData extends \WebMerge\Responses\Data {
 
     /**
      * Return response contents as an array.

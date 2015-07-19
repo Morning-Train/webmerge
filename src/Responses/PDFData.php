@@ -4,7 +4,7 @@ namespace WebMerge\Responses;
 
 use WebMerge\Exceptions\InvalidArgumentException;
 
-class PDFData extends Data {
+class PDFData extends \WebMerge\Responses\Data {
 
     /**
      * Download resource contents as a PDF.
