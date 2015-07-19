@@ -40,7 +40,7 @@ class Merge
     /**
      * Merge constructor.
      */
-    public function __construct($id, $key, $download = false, $test = true)
+    public function __construct($id, $key, $download = false, $test = false)
     {
         $this->id       = $id;
         $this->key      = $key;
