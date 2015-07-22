@@ -25,6 +25,26 @@ class PDFData extends \WebMerge\Responses\Data {
     }
 
     /**
+     * Render the resource contents as a inline PDF.
+     *
+     * @param string $filename A filename excluding the .pdf extension.
+     */
+    public function inline($filename)
+    {
+        if (empty($filename)) {
+            throw new InvalidArgumentException(
+                'Filename parameter is required.'
+            );
+        }
+        header('Content-type: application/pdf');
+        header('Content-Disposition: inline; filename="' . $filename . '.pdf"');
+        header('Content-Transfer-Encoding: binary');
+        header('Accept-Ranges: bytes');
+        print $this->contents;
+        exit;
+    }
+
+    /**
      * Save resource contents to the file system.
      *
      * @param string $filename A path to save the data too.
