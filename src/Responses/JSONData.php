@@ -12,6 +12,6 @@ class JSONData extends \WebMerge\Responses\Data {
      */
     public function asArray()
     {
-        return $this->contents ? json_decode($this->contents) : [];
+        return $this->contents ? json_decode($this->contents, true) : [];
     }
 }
