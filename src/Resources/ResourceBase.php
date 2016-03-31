@@ -49,6 +49,20 @@ abstract class ResourceBase
     }
 
     /**
+     * Get a list of resources.
+     *
+     * @return \WebMerge\Response
+     */
+    public function list()
+    {
+        $response = $this->request->call(
+            'GET', [$this->params()]
+        );
+
+        return new ResponseData($response);
+    }
+
+    /**
      * Get a single resource.
      *
      * @return \WebMerge\Response
