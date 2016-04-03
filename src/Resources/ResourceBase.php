@@ -33,6 +33,15 @@ abstract class ResourceBase
     }
 
     /**
+     * Get resource identifier.
+     *
+     * @return int A WebMerge resource identifier.
+     */
+    public function getIdentifier() {
+        return $this->id;
+    }
+
+    /**
      * Get a list of resources.
      *
      * @param array $query
