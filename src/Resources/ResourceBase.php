@@ -33,6 +33,15 @@ abstract class ResourceBase
     }
 
     /**
+     * Get resource identifier.
+     *
+     * @return int A WebMerge resource identifier.
+     */
+    public function getIdentifier() {
+        return $this->id;
+    }
+
+    /**
      * Get a list of resources.
      *
      * @param array $query
@@ -43,6 +52,20 @@ abstract class ResourceBase
     {
         $response = $this->request->call(
             'GET', [$this->params(), ['query' => $query]]
+        );
+
+        return new ResponseData($response);
+    }
+
+    /**
+     * Get a list of resources.
+     *
+     * @return \WebMerge\Response
+     */
+    public function list()
+    {
+        $response = $this->request->call(
+            'GET', [$this->params()]
         );
 
         return new ResponseData($response);
