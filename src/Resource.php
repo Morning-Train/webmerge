@@ -34,13 +34,14 @@ class Resource
      * Callable method.
      *
      * @param string $identifier A unique identifier.
+     * @param string $folder A folder name.
      *
      * @throws \WebMerge\Exceptions\Exception
      * @throws \WebMerge\Exceptions\InvalidArgumentException
      *
      * @return \WebMerge\Response
      */
-    public function __invoke($identifier = null)
+    public function __invoke($identifier = null, $folder = '')
     {
         if (!class_exists($this->class)) {
             throw new \WebMerge\Exceptions\InvalidArgumentException(
@@ -58,6 +59,9 @@ class Resource
                         'Content-Type'  => 'application/json',
                         'Authorization' => 'Basic ' . $config->getAPIKey()
                     ],
+                    'query' => [
+                        'folder' => $folder
+                    ]
                 ])
             ), $identifier);
         } catch (\Exception $e) {
