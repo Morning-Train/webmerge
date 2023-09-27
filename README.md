@@ -3,7 +3,7 @@ WebMerge
 
 ### Requirements
 
-The PHP library depends on PHP 5.5 or higher.
+The PHP library depends on PHP 7.4 or higher.
 
 ### Installation
 
